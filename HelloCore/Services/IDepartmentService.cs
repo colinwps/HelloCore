@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HelloCore.Models;
 
 namespace HelloCore.Services
 {
-    interface IDepartmentService
+    public interface IDepartmentService
     {
+        Task<IEnumerable<Department>> GetAll();
+        Task<Department> GetById(int id);
+        Task<CompanySummary> GetCompanySummary();
+        Task Add(Department department);
     }
 }
