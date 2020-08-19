@@ -19,7 +19,7 @@ namespace HelloCore.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.Title = "部门首页";
-            var departments = _departmentService.GetAll();
+            var departments = await _departmentService.GetAll();
             return View(departments);
         }
 
